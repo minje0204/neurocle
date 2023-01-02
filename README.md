@@ -50,4 +50,36 @@ npm start
     - **Undo**는 도형정보 array 마지막 엘리먼트 slice
     - **Redo**는 도형정보 array 마지막에 history 도형 정보 추가
 
+**폴더구조**
+
+```
+src
+|   App.js
+|   index.js
+|
++---components
+|   +---common
+|   |       CustomButton.js
+|   |
+|   +---nav
+|   |       ColorPicker.js  #색 정하기 관련 컴포넌트
+|   |       Header.js
+|   |       Nav.js      #도형 그리기, 두께, 색 선정 버튼 등
+|   |
+|   \---stage
+|           CustomLayer.js   # 사용자가 그린 도형 그리기
+|           CustomStage.js   # konva Stage에서 발생하는 마우스 이벤트 설정
+|
++---hooks
+|       useHistoryContext.js  #history 관련 Context
+|       useShapesContext.js   #새로운 도형 만들기, mousemove시 도형 그리기 관련 Context
+|       useToolContext.js  #두께,색, 어떤 도형을 그릴지 사용자 입력값 관련 Context
+|
+\---shapes  #도형 최초 생성시 initial값과 MouseMove시 변경되는 값 관련 코드
+        utilsCircle.js
+        utilsLine.js
+        utilsPolygons.js
+        utilsRectangle.js
+```
+
 제출방법 : 개인 Github에 소스코드 업로드 후 Github 주소를 본 메일(neurocle@neuro-cle.com)로 송부

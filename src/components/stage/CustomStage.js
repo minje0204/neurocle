@@ -2,7 +2,7 @@ import { useContext, useRef } from "react";
 import { Stage } from "react-konva";
 import styled from "styled-components";
 import { HistoryContext } from "../../hooks/useHistoryContext";
-import { ShapeContext } from "../../hooks/useShapes";
+import { ShapeContext } from "../../hooks/useShapesContext";
 import { ToolContext } from "../../hooks/useToolContext";
 import CustomLayer from "./CustomLayer";
 
